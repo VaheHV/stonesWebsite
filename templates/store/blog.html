@@ -1,0 +1,102 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+    <style>
+    .cid-tZQRXE9pSn {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+        background-color: #ffffff;
+    }
+
+    .cid-tZQRXE9pSn .item-subtitle {
+        line-height: 1.2;
+        color: #000000;
+    }
+
+    .cid-tZQRXE9pSn img,
+    .cid-tZQRXE9pSn .item-img {
+        width: 100%;
+        height: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .cid-tZQRXE9pSn .item:focus,
+    .cid-tZQRXE9pSn span:focus {
+        outline: none;
+    }
+
+    .cid-tZQRXE9pSn .item {
+        margin-bottom: 2rem;
+    }
+
+    @media (max-width: 767px) {
+        .cid-tZQRXE9pSn .item {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .cid-tZQRXE9pSn .item-wrapper {
+        position: relative;
+        border-radius: 4px;
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .cid-tZQRXE9pSn .mbr-section-title {
+        color: #000000;
+    }
+
+    .cid-tZQRXE9pSn .mbr-text,
+    .cid-tZQRXE9pSn .mbr-section-btn {
+        color: #000000;
+    }
+
+    .cid-tZQRXE9pSn .item-title {
+        color: #000000;
+    }
+
+    .cid-tZQRXE9pSn .content-head {
+        max-width: 800px;
+    }
+</style>
+<section class="blog-2 cid-tZQRXE9pSn" id="blog-2-tZQRXE9pSn">
+    <div class="container-fluid">
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 content-head">
+                <div class="mbr-section-head">
+                    <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                        <strong>GlamRocks Blog</strong>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for blog in blogs %}
+            <div class="item features-image col-12 col-md-6 col-lg-3 active">
+                <div class="item-wrapper">
+                    <div class="item-img mb-3">
+                        <img src="{{ blog.image.url }}">
+                    </div>
+                    <div class="item-content align-left">
+                        <h5 class="item-title mbr-fonts-style mt-0 mb-3 display-7">
+                            {{ blog.tag }}
+                        </h5>
+                        <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+                            <strong>{{ blog.title }}</strong>
+                        </h6>
+
+                        <div class="mbr-section-btn item-footer">
+                            <a href="#" class="btn item-btn btn-primary display-7">
+                                Explore
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
