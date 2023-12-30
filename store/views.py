@@ -14,3 +14,7 @@ def blog(request):
 def product(request):
     products = Product.objects.all()
     return render(request, 'store/products.html', {'products': products})
+
+
+def about(request):
+    return render(request, 'store/about.html')

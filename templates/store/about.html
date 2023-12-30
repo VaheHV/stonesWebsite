@@ -1,0 +1,56 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'store/navbar.html' %}
+    <style>
+  .cid-tZQRXE6Suz {
+    display: flex;
+    background-image: url("{% static 'store/img/photo-1592317295760-5c1f677dfc78.jpeg' %}");
+  }
+  .cid-tZQRXE6Suz .mbr-overlay {
+    background-color: #000000;
+    opacity: 0.5;
+  }
+  @media (min-width: 768px) {
+    .cid-tZQRXE6Suz {
+      align-items: flex-end;
+    }
+    .cid-tZQRXE6Suz .row {
+      justify-content: center;
+    }
+    .cid-tZQRXE6Suz .content-wrap {
+      padding: 1rem 3rem;
+    }
+  }
+  @media (max-width: 991px) and (min-width: 768px) {
+    .cid-tZQRXE6Suz .content-wrap {
+      min-width: 50%;
+    }
+  }
+  @media (max-width: 767px) {
+    .cid-tZQRXE6Suz {
+      -webkit-align-items: center;
+      align-items: flex-end;
+    }
+    .cid-tZQRXE6Suz .mbr-row {
+      -webkit-justify-content: center;
+      justify-content: center;
+    }
+    .cid-tZQRXE6Suz .content-wrap {
+      width: 100%;
+    }
+  }
+  .cid-tZQRXE6Suz .mbr-section-title,
+  .cid-tZQRXE6Suz .mbr-section-subtitle {
+    text-align: center;
+  }
+  .cid-tZQRXE6Suz .mbr-text,
+  .cid-tZQRXE6Suz .mbr-section-btn {
+    text-align: center;
+  }
+</style>
+<section class="header16 cid-tZQRXE6Suz mbr-fullscreen mbr-parallax-background" id="hero-17-tZQRXE6Suz">
+  <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
+</section>
+{% endblock %}
