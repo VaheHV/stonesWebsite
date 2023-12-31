@@ -1,6 +1,5 @@
 {% extends 'store/base.html' %}
-{% load static %}
-
+{% block title %}Blog{% endblock %}
 {% block content %}
 <!-- navbar -->
 {% include 'store/header_secondary.html' %}
@@ -92,7 +91,7 @@
                         </h6>
 
                         <div class="mbr-section-btn item-footer">
-                            <a href="#" class="btn item-btn btn-primary display-7">
+                            <a href="{% url 'article' blog.id %}" class="btn item-btn btn-primary display-7">
                                 Explore
                             </a>
                         </div>

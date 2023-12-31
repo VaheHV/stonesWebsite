@@ -1,0 +1,43 @@
+{% extends 'store/base.html' %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block content %}
+{% include 'store/header_secondary.html' %}
+<style>
+img.resize {
+  max-width: 768px;
+  max-height: 768px;
+  width: auto;
+  height: auto;
+}
+</style>
+<section class="article8 cid-tZQRXE6vRU" id="about-us-8-tZQRXE6vRU">
+  <div class="container">
+    <br>
+    <div class="row justify-content-center">
+      <div class="card col-md-12 col-lg-10">
+        <div class="card-wrapper">
+          <div class="card-content-text">
+            <h3 class="card-title mbr-fonts-style mbr-black mt-3 mb-4 display-2">
+            <center><strong>{{ article.title }}</strong></center>
+            </h3>
+          </div>
+          <div class="image-wrapper d-flex justify-content-center mb-4">
+            <img class="resize" src="{{ article.image.url }}">
+          </div>
+
+          <div class="row card-box align-left">
+            <div class="item features-without-image col-12">
+              <div class="item-wrapper">
+                <p class="mbr-text mbr-fonts-style display-7">{{ article.body }}</p>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+```

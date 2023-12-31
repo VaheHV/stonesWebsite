@@ -1,5 +1,6 @@
 {% extends 'store/base.html' %}
 {% load static %}
+{% block title %}Exquisite Gemstone Jewellery{% endblock %}
 {% block content %}
 {% include 'store/header_primary.html' %}
     <style>
@@ -648,90 +649,29 @@
             </div>
         </div>
         <div class="row">
+            {% for blog in blogs %}
             <div class="item features-image col-12 col-md-6 col-lg-3 active">
                 <div class="item-wrapper">
                     <div class="item-img mb-3">
-                        <img src="{% static 'store/img/photo-1551122102-63cd339bfaab.jpeg' %}">
+                        <img src="{{ blog.image.url }}">
                     </div>
                     <div class="item-content align-left">
                         <h5 class="item-title mbr-fonts-style mt-0 mb-3 display-7">
-                            Trends
+                            {{ blog.tag }}
                         </h5>
                         <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
-                            <strong>2024 Jewelry Trends: Embrace the Magic</strong>
+                            <strong>{{ blog.title }}</strong>
                         </h6>
 
                         <div class="mbr-section-btn item-footer">
-                            <a href="" class="btn item-btn btn-primary display-7">
+                            <a href="{% url 'article' blog.id %}" class="btn item-btn btn-primary display-7">
                                 Explore
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="item features-image col-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="{% static 'store/img/photo-1608637273739-15f0cd97285e.jpeg' %}" data-slide-to="1" data-bs-slide-to="1">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style mb-3 mt-0 display-7">
-                            Styling
-                        </h5>
-                        <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
-                            <strong>How to Style Semi-Precious Stones</strong>
-                        </h6>
-                        <div class="mbr-section-btn item-footer">
-                            <a href="" class="btn item-btn btn-primary display-7">
-                                Explore
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="{% static 'store/img/photo-1534883031555-7d18c6cf52e7.jpeg' %}" data-slide-to="2" data-bs-slide-to="2">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style mb-3 mt-0 display-7">
-                            Care
-                        </h5>
-                        <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
-                            <strong>Caring for Your GlamRocks Jewelry</strong>
-                        </h6>
-                        <div class="mbr-section-btn item-footer">
-                            <a href="" class="btn item-btn btn-primary display-7">
-                                Explore
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-lg-3">
-                <div class="item-wrapper">
-                    <div class="item-img mb-3">
-                        <img src="{% static 'store/img/photo-1595010297236-769d54fbcc71.jpeg' %}" data-slide-to="3" data-bs-slide-to="4">
-                    </div>
-                    <div class="item-content align-left">
-                        <h5 class="item-title mbr-fonts-style mb-3 mt-0 display-7">
-                            Custom
-                        </h5>
-                        <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
-                            <strong>
-                                Create Your Custom Piece
-                            </strong>
-                        </h6>
-
-                        <div class="mbr-section-btn item-footer">
-                            <a href="" class="btn item-btn btn-primary display-7">
-                                Explore
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
