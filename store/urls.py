@@ -1,5 +1,5 @@
 from django.urls import path
-import store.views as views
+from . import views
 
 # Serving media files during development
 from django.conf import settings
