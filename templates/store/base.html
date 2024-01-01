@@ -97,16 +97,16 @@
             <div class="row-links">
                 <ul class="header-menu">
                 <li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="{% url 'about' %}" class="text-white">About</a>
+                    <a href="{% url 'about' %}" class="text-white">Մեր մասին</a>
                   </li><li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="{% url 'products' %}" class="text-white">Products</a>
+                    <a href="{% url 'products' %}" class="text-white">Տեսականի</a>
                   </li><li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="{% url 'blog' %}" class="text-white">Blog</a>
+                    <a href="{% url 'blog' %}" class="text-white">Հոդվածներ</a>
                   </li></li><li class="header-menu-item mbr-fonts-style display-5">
                     {% if request.path == '/' %}
-                    <a onclick=document.getElementById("contacts-2-tZQRXEaU4n").scrollIntoView() class="text-white">Contact</a>
+                    <a onclick=document.getElementById("contacts-2-tZQRXEaU4n").scrollIntoView() class="text-white">Կոնտակտներ</a>
                     {% else %}
-                    <a onclick="goHomeAndScroll()" class="text-white">Contact</a>
+                    <a onclick="goHomeAndScroll()" class="text-white">Կոնտակտներ</a>
                     {% endif %}
                   </li></ul>
               </div>

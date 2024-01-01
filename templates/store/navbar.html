@@ -589,27 +589,27 @@
         <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
           <li class="nav-item">
             <a class="nav-link link text-black display-4" href="{% url 'about' %}"
-              aria-expanded="false">About</a>
+              aria-expanded="false">Մեր մասին</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link text-black display-4" href="{% url 'products' %}">Products</a>
+            <a class="nav-link link text-black display-4" href="{% url 'products' %}">Տեսականի</a>
           </li>
           <li class="nav-item">
             <a class="nav-link link text-black display-4" href="{% url 'blog' %}"
-              aria-expanded="false">Blog</a>
+              aria-expanded="false">Հոդվածներ</a>
           </li>
           <li class="nav-item">
             {% if request.path == '/' %}
             <a class="nav-link link text-black display-4" onclick=document.getElementById("contacts-2-tZQRXEaU4n").scrollIntoView()
-              aria-expanded="false">Contact</a>
+              aria-expanded="false">Կոնտակտներ</a>
             {% else %}
             <a class="nav-link link text-black display-4" onclick="goHomeAndScroll()"
-              aria-expanded="false">Contact</a>
+              aria-expanded="false">Կոնտակտներ</a>
             {% endif %}
           </li>
         </ul>
         <div class="navbar-buttons mbr-section-btn">
-          <a class="btn btn-primary display-4" href="{% url 'products' %}">Explore Now</a>
+          <a class="btn btn-primary display-4" href="{% url 'products' %}">Տեսնել Հիմա</a>
         </div>
       </div>
     </div>

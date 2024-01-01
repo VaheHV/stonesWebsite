@@ -29,6 +29,7 @@ class Product(models.Model):
         ('earrings', 'Ականջօղներ'),
         ('necklaces', 'Վզնոցներ'),
         ('colognes', 'Կուլոններ'),
+        ('men', 'Տղամարդկանց համար'),
         ('other', 'Այլ')
     ]
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='other', verbose_name='Категория')
