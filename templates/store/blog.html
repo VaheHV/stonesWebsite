@@ -75,6 +75,22 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <form method="GET" action="{% url 'blog' %}">
+                <div class="row align-items-center justify-content-center mb-5"">
+                    <div class="col-sm-3 my-1">
+                        <select class="form-control small-text" name="tag">
+                            <option selected value="">Ընտրել ըստ տեգի</option>
+                            {% for tag in tags %}
+                            <option value="{{ tag.tag }}">{{ tag.tag }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="mbr-section-btn col-md-auto my-1">"
+                        <button class="btn btn-black-outline display-7" type="submit">Ֆիլտր</button>
+                    </div>
+            </form>
+        </div>
         <div class="row">
             {% for blog in blogs %}
             <div class="item features-image col-12 col-md-6 col-lg-3 active">

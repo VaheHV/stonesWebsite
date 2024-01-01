@@ -24,10 +24,10 @@ class Product(models.Model):
     image = models.ImageField(upload_to='store/products', verbose_name='Изображение')
     price = models.DecimalField(max_digits=6, decimal_places=2, default=0.00, verbose_name='Цена')
     CATEGORY_CHOICES = [
-        ('bracelets', 'Ձեռնաշղթաներ'),
+        ('bracelets', 'Բրասլետներ'),
         ('rings', 'Մատանիներ'),
         ('earrings', 'Ականջօղներ'),
-        ('rings', 'Վզնոցներ'),
+        ('necklaces', 'Վզնոցներ'),
         ('colognes', 'Կուլոններ'),
         ('other', 'Այլ')
     ]

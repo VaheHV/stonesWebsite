@@ -8,8 +8,16 @@ def home(request):
 
 
 def blog(request):
-    blogs = Blog.objects.all()
-    return render(request, 'store/blog.html', {'blogs': blogs})
+    tag = request.GET.get('tag')
+
+    if tag:
+        blogs = Blog.objects.filter(tag=tag)
+    else:
+        blogs = Blog.objects.all()
+
+    tags = Blog.objects.values('tag').distinct()
+
+    return render(request, 'store/blog.html', {'blogs': blogs, 'tags': tags})
 
 
 def about(request):
